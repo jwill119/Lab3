@@ -1,2 +1,4 @@
-# Lab3
-COSC 2030 third lab
+# COSC 2030 Lab 3
+# Jacob Williams
+
+
