@@ -113,10 +113,23 @@ int main() {
 
     // Let's look at this weird reciprocal thing
 
-    long recipLim = 33333333;
+    long recipLim = 333333333;
     float recipFloat = recipSumFloat(recipLim);
-    cout << "Test of float recip: n = " << recipLim << ", sumRecipFloat(n) = " << recipFloat << endl;
+    cout << "Test of float recip: n = " << recipLim << ", sumRecipFloat(n) = " << recipFloat << endl << endl;
 
+
+    // Final section: Strangeness in for loop
+    cout << "i is a float." << endl;
+    for (float i = 3.4; i < 4.4; i+= 0.2) {
+        cout << "i = " << i << endl;
+    }
+    cout << endl;
+
+    cout << "i is a double." << endl;
+    for (double i = 3.4; i < 4.4; i+= 0.2) {
+        cout << "i = " << i << endl;
+    }
+    cout << endl;
 
     return 0;
 }
