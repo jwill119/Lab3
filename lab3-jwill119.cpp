@@ -113,10 +113,12 @@ int main() {
 
     // Let's look at this weird reciprocal thing
 
-    long recipLim = 333333333;
+    long recipLim = 2;
     float recipFloat = recipSumFloat(recipLim);
-    cout << "Test of float recip: n = " << recipLim << ", sumRecipFloat(n) = " << recipFloat << endl << endl;
+    cout << "Test of float recip: n = " << recipLim << ", sumRecipFloat(n) = " << recipFloat << endl;
 
+    double recipDouble = recipSumDouble(recipLim);
+    cout << "Test of double recip: n = " << recipLim << ", sumRecipDouble(n) = " << recipDouble << endl << endl;
 
     // Final section: Strangeness in for loop
     cout << "i is a float." << endl;
@@ -178,7 +180,7 @@ double calcFactDouble(long upperLim) {
 // Sum of reciprocals to illustrate floating-point pathology
 // Float version
 float recipSumFloat(long upperLim) {
-    float theRecip = static_cast<float> (1/upperLim);
+    float theRecip = static_cast<float> (1.0/upperLim);
     for (long i = 1; i < upperLim; i++) {
         theRecip += theRecip;
     }
@@ -187,7 +189,7 @@ float recipSumFloat(long upperLim) {
 
 // Double verion of sum of reciprocals
 double recipSumDouble(long upperLim) {
-    double theRecip = static_cast<double> (1/upperLim);
+    double theRecip = static_cast<double> (1.0/upperLim);
     for (long i = 1; i < upperLim; i++) {
         theRecip += theRecip;
     }
