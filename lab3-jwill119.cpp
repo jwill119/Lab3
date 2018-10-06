@@ -156,7 +156,7 @@ long calcSumLong(long upperLim) {
     }
    */
     // Way too slow for big, big numbers. We'll use Gauss's formula.
-    return (upperLim*(upperLim-1))/2;
+    return (upperLim*(upperLim+1))/2;
 }
 
 // Factorial function (long int/float, signed)
